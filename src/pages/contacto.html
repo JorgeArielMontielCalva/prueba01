@@ -1,0 +1,122 @@
+    <section class="page-hero rule-grid">
+      <div class="wrap">
+        <span class="crumb label">§05 / Contacto</span>
+        <div class="grid">
+          <h1 class="h-xl">Agenda tu<br>valoración.</h1>
+          <p class="lead">30 minutos, gratis y hablada. Llena esto y te contacto para fijar la fecha. Mientras más me cuentes, mejor llego preparado.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section on-light">
+      <div class="wrap contact-layout">
+        <aside class="contact-aside">
+          <span class="label muted">Qué sigue</span>
+          <h2 class="h-md" style="margin-top:16px">Tres pasos y tienes tu cotización.</h2>
+          <ol class="steps steps--v" style="margin-top:28px">
+            <li class="step is-key"><span class="step__n">01</span><div><h3>Envías este formulario</h3></div><p>Toma un par de minutos.</p></li>
+            <li class="step"><span class="step__n">02</span><div><h3>Hablamos 30 minutos</h3></div><p>Te contacto para agendar. <span class="pending">[PENDIENTE: tiempo de respuesta]</span></p></li>
+            <li class="step"><span class="step__n">03</span><div><h3>Recibes la cotización</h3></div><p>Por escrito, con alcance y revisiones.</p></li>
+          </ol>
+          <table class="spec">
+            <caption class="sr-only">Otros medios de contacto</caption>
+            <tr><th scope="row">Correo</th><td><span class="pending">[PENDIENTE]</span></td></tr>
+            <tr><th scope="row">WhatsApp</th><td><span class="pending">[PENDIENTE]</span></td></tr>
+            <tr><th scope="row">Horario</th><td><span class="pending">[PENDIENTE]</span></td></tr>
+          </table>
+        </aside>
+
+        <form class="form" name="valoracion" method="POST" action="/gracias.html" data-netlify="true" netlify-honeypot="empresa-web">
+          <input type="hidden" name="form-name" value="valoracion">
+          <p class="hp"><label>No llenes este campo <input name="empresa-web" tabindex="-1" autocomplete="off"></label></p>
+
+          <div class="row">
+            <div>
+              <label class="f-label" for="f-nombre"><span>Tu nombre</span><span class="req">*</span></label>
+              <input id="f-nombre" type="text" name="nombre" autocomplete="name" required>
+            </div>
+            <div>
+              <label class="f-label" for="f-negocio"><span>Tu negocio</span><span class="req">*</span></label>
+              <input id="f-negocio" type="text" name="negocio" autocomplete="organization" required>
+            </div>
+          </div>
+
+          <div class="row">
+            <div>
+              <label class="f-label" for="f-giro"><span>Giro</span></label>
+              <input id="f-giro" type="text" name="giro" placeholder="Ej. mantenimiento, restaurante, despacho">
+            </div>
+            <div>
+              <label class="f-label" for="f-ciudad"><span>Ciudad</span></label>
+              <input id="f-ciudad" type="text" name="ciudad" autocomplete="address-level2">
+            </div>
+          </div>
+
+          <fieldset>
+            <legend><span>¿Qué tienes hoy?</span><span>Marca todo lo que aplique</span></legend>
+            <div class="chips">
+              <label class="chip"><input type="checkbox" name="tiene[]" value="Sitio web"><span>Sitio web</span></label>
+              <label class="chip"><input type="checkbox" name="tiene[]" value="Dominio propio"><span>Dominio</span></label>
+              <label class="chip"><input type="checkbox" name="tiene[]" value="Correo con dominio"><span>Correo con dominio</span></label>
+              <label class="chip"><input type="checkbox" name="tiene[]" value="Logotipo"><span>Logotipo</span></label>
+              <label class="chip"><input type="checkbox" name="tiene[]" value="Redes sociales"><span>Redes</span></label>
+              <label class="chip"><input type="checkbox" name="tiene[]" value="Perfil de Google"><span>Perfil de Google</span></label>
+              <label class="chip"><input type="checkbox" name="tiene[]" value="Nada aún"><span>Nada aún</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend><span>¿Qué te interesa?</span><span>Elige el principal</span></legend>
+            <div class="chips">
+              <label class="chip"><input type="radio" name="area" value="desarrollo"><span>Desarrollo</span></label>
+              <label class="chip"><input type="radio" name="area" value="identidad"><span>Identidad</span></label>
+              <label class="chip"><input type="radio" name="area" value="presencia"><span>Presencia</span></label>
+              <label class="chip"><input type="radio" name="area" value="soporte"><span>Soporte</span></label>
+              <label class="chip"><input type="radio" name="area" value="investigacion"><span>Investigación</span></label>
+              <label class="chip"><input type="radio" name="area" value="equipo"><span>Equipo</span></label>
+              <label class="chip"><input type="radio" name="area" value="no-se"><span>No sé aún</span></label>
+            </div>
+          </fieldset>
+
+          <div>
+            <label class="f-label" for="f-presupuesto"><span>Presupuesto aproximado</span></label>
+            <select id="f-presupuesto" name="presupuesto">
+              <option value="">Selecciona una opción</option>
+              <option value="entrada">Plan de entrada · $5,000–8,000 MXN</option>
+              <option value="paquete">Paquete · $15,000–30,000 MXN</option>
+              <option value="no-se">Todavía no lo sé</option>
+            </select>
+            <p class="hint">Dominio, hosting, licencias y pauta se pagan aparte.</p>
+          </div>
+
+          <div>
+            <label class="f-label" for="f-mensaje"><span>Cuéntame qué necesitas</span></label>
+            <textarea id="f-mensaje" name="mensaje" placeholder="Qué tienes, qué te falta y qué te gustaría resolver primero."></textarea>
+          </div>
+
+          <div class="row">
+            <div>
+              <label class="f-label" for="f-tel"><span>WhatsApp o teléfono</span><span class="req">*</span></label>
+              <input id="f-tel" type="tel" name="telefono" autocomplete="tel" inputmode="tel" required>
+            </div>
+            <div>
+              <label class="f-label" for="f-email"><span>Correo</span></label>
+              <input id="f-email" type="email" name="email" autocomplete="email">
+            </div>
+          </div>
+
+          <fieldset>
+            <legend><span>¿Cómo prefieres la valoración?</span></legend>
+            <div class="chips">
+              <label class="chip"><input type="radio" name="formato" value="llamada" checked><span>Llamada</span></label>
+              <label class="chip"><input type="radio" name="formato" value="videollamada"><span>Videollamada</span></label>
+            </div>
+          </fieldset>
+
+          <div class="form-foot">
+            <p>Tus datos solo se usan para contactarte sobre tu valoración. <span class="pending">[PENDIENTE: aviso de privacidad]</span></p>
+            <button class="btn" type="submit">Enviar solicitud <span class="arr" aria-hidden="true">→</span></button>
+          </div>
+        </form>
+      </div>
+    </section>
