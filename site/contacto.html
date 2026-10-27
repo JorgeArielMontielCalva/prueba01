@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agenda tu valoración — ANTEVRIC</title>
+  <meta name="description" content="Agenda una valoración gratuita de 30 minutos. Termina en una cotización escrita.">
+  <meta name="theme-color" content="#141719">
+  <meta property="og:title" content="Agenda tu valoración — ANTEVRIC">
+  <meta property="og:description" content="Agenda una valoración gratuita de 30 minutos. Termina en una cotización escrita.">
+  <meta property="og:type" content="website">
+  <!-- [PENDIENTE: og:image y favicon con el logotipo] -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip" href="#main">Saltar al contenido</a>
+  <div class="topbar mono">
+    <div class="wrap">
+      <span><span class="status-dot" aria-hidden="true"></span>Valoración gratuita · 30 min</span>
+      <span class="hide-sm">Desarrollo · Diseño · Infraestructura</span>
+      <span>MX <span data-clock>--:--:--</span></span>
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="/" aria-label="ANTEVRIC, inicio">
+        <!-- [PENDIENTE: reemplaza .logo-slot por el SVG del logotipo] -->
+        <span class="logo-slot" aria-hidden="true">SVG</span>
+        <span class="logo-word">ANTEVRIC</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav"><span class="t">Menú</span><span class="bars" aria-hidden="true"></span></button>
+      <nav class="nav" id="nav" aria-label="Principal">
+        <ul>
+          <li><a href="/"><span class="mono">00</span>Inicio</a></li>
+          <li><a href="/servicios.html"><span class="mono">01</span>Servicios</a></li>
+          <li><a href="/metodo.html"><span class="mono">02</span>Método</a></li>
+          <li><a href="/trabajo.html"><span class="mono">03</span>Trabajo</a></li>
+          <li><a href="/estudio.html"><span class="mono">04</span>Estudio</a></li>
+        </ul>
+        <div class="nav-cta"><a class="btn" href="/contacto.html">Agenda tu valoración <span class="arr" aria-hidden="true">→</span></a></div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero rule-grid">
+      <div class="wrap">
+        <span class="crumb label">§05 / Contacto</span>
+        <div class="grid">
+          <h1 class="h-xl">Agenda tu<br>valoración.</h1>
+          <p class="lead">30 minutos, gratis y hablada. Llena esto y te contacto para fijar la fecha. Mientras más me cuentes, mejor llego preparado.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section on-light">
+      <div class="wrap contact-layout">
+        <aside class="contact-aside">
+          <span class="label muted">Qué sigue</span>
+          <h2 class="h-md" style="margin-top:16px">Tres pasos y tienes tu cotización.</h2>
+          <ol class="steps steps--v" style="margin-top:28px">
+            <li class="step is-key"><span class="step__n">01</span><div><h3>Envías este formulario</h3></div><p>Toma un par de minutos.</p></li>
+            <li class="step"><span class="step__n">02</span><div><h3>Hablamos 30 minutos</h3></div><p>Te contacto para agendar. <span class="pending">[PENDIENTE: tiempo de respuesta]</span></p></li>
+            <li class="step"><span class="step__n">03</span><div><h3>Recibes la cotización</h3></div><p>Por escrito, con alcance y revisiones.</p></li>
+          </ol>
+          <table class="spec">
+            <caption class="sr-only">Otros medios de contacto</caption>
+            <tr><th scope="row">Correo</th><td><span class="pending">[PENDIENTE]</span></td></tr>
+            <tr><th scope="row">WhatsApp</th><td><span class="pending">[PENDIENTE]</span></td></tr>
+            <tr><th scope="row">Horario</th><td><span class="pending">[PENDIENTE]</span></td></tr>
+          </table>
+        </aside>
+
+        <form class="form" name="valoracion" method="POST" action="/gracias.html" data-netlify="true" netlify-honeypot="empresa-web">
+          <input type="hidden" name="form-name" value="valoracion">
+          <p class="hp"><label>No llenes este campo <input name="empresa-web" tabindex="-1" autocomplete="off"></label></p>
+
+          <div class="row">
+            <div>
+              <label class="f-label" for="f-nombre"><span>Tu nombre</span><span class="req">*</span></label>
+              <input id="f-nombre" type="text" name="nombre" autocomplete="name" required>
+            </div>
+            <div>
+              <label class="f-label" for="f-negocio"><span>Tu negocio</span><span class="req">*</span></label>
+              <input id="f-negocio" type="text" name="negocio" autocomplete="organization" required>
+            </div>
+          </div>
+
+          <div class="row">
+            <div>
+              <label class="f-label" for="f-giro"><span>Giro</span></label>
+              <input id="f-giro" type="text" name="giro" placeholder="Ej. mantenimiento, restaurante, despacho">
+            </div>
+            <div>
+              <label class="f-label" for="f-ciudad"><span>Ciudad</span></label>
+              <input id="f-ciudad" type="text" name="ciudad" autocomplete="address-level2">
+            </div>
+          </div>
+
+          <fieldset>
+            <legend><span>¿Qué tienes hoy?</span><span>Marca todo lo que aplique</span></legend>
+            <div class="chips">
+              <label class="chip"><input type="checkbox" name="tiene[]" value="Sitio web"><span>Sitio web</span></label>
+              <label class="chip"><input type="checkbox" name="tiene[]" value="Dominio propio"><span>Dominio</span></label>
+              <label class="chip"><input type="checkbox" name="tiene[]" value="Correo con dominio"><span>Correo con dominio</span></label>
+              <label class="chip"><input type="checkbox" name="tiene[]" value="Logotipo"><span>Logotipo</span></label>
+              <label class="chip"><input type="checkbox" name="tiene[]" value="Redes sociales"><span>Redes</span></label>
+              <label class="chip"><input type="checkbox" name="tiene[]" value="Perfil de Google"><span>Perfil de Google</span></label>
+              <label class="chip"><input type="checkbox" name="tiene[]" value="Nada aún"><span>Nada aún</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend><span>¿Qué te interesa?</span><span>Elige el principal</span></legend>
+            <div class="chips">
+              <label class="chip"><input type="radio" name="area" value="desarrollo"><span>Desarrollo</span></label>
+              <label class="chip"><input type="radio" name="area" value="identidad"><span>Identidad</span></label>
+              <label class="chip"><input type="radio" name="area" value="presencia"><span>Presencia</span></label>
+              <label class="chip"><input type="radio" name="area" value="soporte"><span>Soporte</span></label>
+              <label class="chip"><input type="radio" name="area" value="investigacion"><span>Investigación</span></label>
+              <label class="chip"><input type="radio" name="area" value="equipo"><span>Equipo</span></label>
+              <label class="chip"><input type="radio" name="area" value="no-se"><span>No sé aún</span></label>
+            </div>
+          </fieldset>
+
+          <div>
+            <label class="f-label" for="f-presupuesto"><span>Presupuesto aproximado</span></label>
+            <select id="f-presupuesto" name="presupuesto">
+              <option value="">Selecciona una opción</option>
+              <option value="entrada">Plan de entrada · $5,000–8,000 MXN</option>
+              <option value="paquete">Paquete · $15,000–30,000 MXN</option>
+              <option value="no-se">Todavía no lo sé</option>
+            </select>
+            <p class="hint">Dominio, hosting, licencias y pauta se pagan aparte.</p>
+          </div>
+
+          <div>
+            <label class="f-label" for="f-mensaje"><span>Cuéntame qué necesitas</span></label>
+            <textarea id="f-mensaje" name="mensaje" placeholder="Qué tienes, qué te falta y qué te gustaría resolver primero."></textarea>
+          </div>
+
+          <div class="row">
+            <div>
+              <label class="f-label" for="f-tel"><span>WhatsApp o teléfono</span><span class="req">*</span></label>
+              <input id="f-tel" type="tel" name="telefono" autocomplete="tel" inputmode="tel" required>
+            </div>
+            <div>
+              <label class="f-label" for="f-email"><span>Correo</span></label>
+              <input id="f-email" type="email" name="email" autocomplete="email">
+            </div>
+          </div>
+
+          <fieldset>
+            <legend><span>¿Cómo prefieres la valoración?</span></legend>
+            <div class="chips">
+              <label class="chip"><input type="radio" name="formato" value="llamada" checked><span>Llamada</span></label>
+              <label class="chip"><input type="radio" name="formato" value="videollamada"><span>Videollamada</span></label>
+            </div>
+          </fieldset>
+
+          <div class="form-foot">
+            <p>Tus datos solo se usan para contactarte sobre tu valoración. <span class="pending">[PENDIENTE: aviso de privacidad]</span></p>
+            <button class="btn" type="submit">Enviar solicitud <span class="arr" aria-hidden="true">→</span></button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="label">Estudio técnico · México</span>
+          <span class="logo-word">ANTEVRIC</span>
+          <p>Desarrollo · Diseño · Infraestructura</p>
+        </div>
+        <div>
+          <h4>Mapa</h4>
+          <ul>
+            <li><a href="/servicios.html">Servicios</a></li>
+            <li><a href="/metodo.html">Método</a></li>
+            <li><a href="/trabajo.html">Trabajo</a></li>
+            <li><a href="/estudio.html">Estudio</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="/contacto.html">Valoración</a></li>
+            <li><span class="pending">[PENDIENTE: correo]</span></li>
+            <li><span class="pending">[PENDIENTE: WhatsApp]</span></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Redes</h4>
+          <ul>
+            <li><span class="pending">[PENDIENTE: enlaces a redes]</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-giant" aria-hidden="true">ANTEVRIC</div>
+      <div class="footer-base mono">
+        <span>© <span data-year>2026</span> ANTEVRIC</span>
+        <span>Un proyecto a la vez</span>
+      </div>
+    </div>
+  </footer>
+  <script src="/assets/main.js" defer></script>
+</body>
+</html>
