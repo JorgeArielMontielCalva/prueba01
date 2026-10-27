@@ -131,7 +131,7 @@ h1, h2, h3, h4 { margin: 0; font-family: var(--f-display); font-weight: 800; lin
 .sec-head .sec-meta { color: var(--niebla); }
 .on-light .sec-head .sec-meta { color: var(--acero); }
 
-.h-xl { font-size: clamp(44px, 9.5vw, 132px); letter-spacing: -0.035em; }
+.h-xl { font-size: clamp(34px, 11vw, 132px); letter-spacing: -0.035em; }
 .h-lg { font-size: clamp(36px, 6.4vw, 84px); letter-spacing: -0.03em; }
 .h-md { font-size: clamp(28px, 3.8vw, 48px); }
 .h-sm { font-size: clamp(20px, 2vw, 26px); font-weight: 700; letter-spacing: -0.01em; line-height: 1.1; }
@@ -252,7 +252,7 @@ h1, h2, h3, h4 { margin: 0; font-family: var(--f-display); font-weight: 800; lin
 .nav-open .nav-toggle .bars::after { top: 4px; transform: rotate(-45deg); }
 
 .nav {
-  position: fixed; inset: 64px 0 0 0; z-index: 49;
+  position: absolute; top: 100%; left: 0; right: 0; height: calc(100vh - 64px); height: calc(100dvh - 64px); z-index: 49;
   background: var(--carbon);
   padding: 24px var(--gutter) 40px;
   display: flex; flex-direction: column; justify-content: space-between;
@@ -276,7 +276,7 @@ h1, h2, h3, h4 { margin: 0; font-family: var(--f-display); font-weight: 800; lin
 @media (min-width: 1000px) {
   .nav-toggle { display: none; }
   .nav {
-    position: static; inset: auto; padding: 0; background: none;
+    position: static; height: auto; padding: 0; background: none;
     flex-direction: row; align-items: center; gap: 28px;
     visibility: visible; opacity: 1; transform: none; overflow: visible;
   }
@@ -582,7 +582,8 @@ h1, h2, h3, h4 { margin: 0; font-family: var(--f-display); font-weight: 800; lin
 .plan { border: 1px solid var(--line-dark-strong); padding: 28px; display: flex; flex-direction: column; gap: 20px; }
 @media (min-width: 720px) { .plan { padding: 36px; } }
 .plan .label { color: var(--niebla); }
-.plan__price { font-family: var(--f-display); font-weight: 800; font-size: clamp(38px, 5.4vw, 64px); letter-spacing: -0.03em; line-height: 1; }
+.plan__price { font-family: var(--f-display); font-weight: 800; font-size: clamp(32px, 4.2vw, 56px); letter-spacing: -0.03em; line-height: 1; }
+.plan__price .nw { white-space: nowrap; }
 .plan__price small { font-family: var(--f-mono); font-size: 12px; font-weight: 500; letter-spacing: .14em; color: var(--niebla); margin-left: 6px; }
 .plan p { color: var(--niebla); margin: 0; }
 .plan--main { background: var(--hueso); color: var(--carbon); border-color: var(--hueso); }
